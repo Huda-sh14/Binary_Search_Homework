@@ -49,7 +49,7 @@ namespace Binary_Search_Homework
         {
             // search space is nums[left…right]
             int left = 0;
-            int right = nums.Length + 1;
+            int right = 1;
 
             // initialize the result by -1
             int result = -1;
@@ -73,12 +73,12 @@ namespace Binary_Search_Homework
                     // go on searching towards the right (higher indices)
                     else
                     {
-                        left = mid + 1;
+                        left = mid - 1;
                     }
                 }
 
                 // if the target is less than the middle element, discard the right half
-                else if (target < nums[mid])
+                else if (target > nums[mid])
                 {
                     right = mid - 1;
                 }
